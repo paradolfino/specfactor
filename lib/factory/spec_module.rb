@@ -25,13 +25,13 @@ module SpecModule
   def self.show(name)
     "describe 'GET #show' do
       it 'returns http success' do
-        part = create(:participant)
+        #{name} = create(:#{name})
         get :show, params: {id: part.to_param}
         expect(response).to have_http_status(:success)
       end
 
       it 'assigns @participant to a Participant' do
-        part = create(:participant)
+        #{name} = create(:#{name})
         get :show, params: {id: part.to_param}
         expect(assigns(:participant)).to eq(part)
       end
