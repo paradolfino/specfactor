@@ -1,14 +1,14 @@
 require 'rails_helper'
-RSpec.describe RandalsController, type: :controller do
+RSpec.describe TestController, type: :controller do
 describe 'GET #index' do
       it 'returns http success' do
         get :index
         expect(response).to have_http_status(:success)
       end
-      it 'assigns @randals to Participant.all' do
-        part = create(:randals)
+      it 'assigns @tests to Test.all' do
+        test = create(:test)
         get :index
-        expect(assigns(:participants)).to eq([part])
+        expect(assigns(:tests)).to eq([test])
       end
     end
 end

@@ -14,7 +14,7 @@ module SpecModule
         get :index
         expect(response).to have_http_status(:success)
       end
-      it 'assigns @#{Utils.pluralize(name)} to Participant.all' do
+      it 'assigns @#{Utils.pluralize(name)} to #{name.capitalize}.all' do
         #{name} = create(:#{name})
         get :index
         expect(assigns(:#{Utils.pluralize(name)})).to eq([#{name}])

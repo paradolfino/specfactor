@@ -20,9 +20,17 @@ module Specfactor
       end
     end
 
+    def sanitize(input)
+      rem = "_controller"
+      if input.include? "_controller"
+        input.gsub!(rem, "")
+      end
+    end
+
     def start
       puts "Name of Controller:"
       input = gets.chomp
+      sanitize(input)
       puts "Generating tests for #{input} Controller"
       pull_src(input)
     end
