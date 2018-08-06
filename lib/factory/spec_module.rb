@@ -22,5 +22,9 @@ module SpecModule
     end"
   end
 
+  def self.show(name)
+    
+  end
+
 end
 
