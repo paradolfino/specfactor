@@ -25,7 +25,7 @@ module Specfactor
           ["require 'rails_helper'","RSpec.describe #{controller.capitalize}Controller, type: :controller do"]
       )
 
-      actions != nil ? actions.each {|action| opener("a", SpecModule.public_send(action))}
+      actions != nil ? actions.each {|action| opener("a", SpecModule.public_send(action))} : nil
 
     end
 
