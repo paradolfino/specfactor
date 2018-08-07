@@ -14,8 +14,6 @@ module Specfactor
         lines.each do |item|
           filer.call("a", item)
         end
-      elsif mode == "end"
-        filer.call("a", lines)
       else
         filer.call("a", lines)
       end
