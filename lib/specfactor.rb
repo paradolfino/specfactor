@@ -30,7 +30,9 @@ module Specfactor
       rem = "_controller"
       if controller.include? "_controller"
         controller.gsub!(rem, "")
+        puts controller
       end
+      actions.split!(" ")
     end
 
     def start
