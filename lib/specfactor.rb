@@ -36,6 +36,7 @@ module Specfactor
       )
       # p actions
       actions != nil ? actions.each {|action| opener("body", SpecModule.public_send(action.to_sym, controller))} : nil
+      opener("end", "end")
 
     end
 
