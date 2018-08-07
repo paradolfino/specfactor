@@ -13,15 +13,15 @@ module Specfactor
       end
     end
 
-    def pull_src(param)
+    def pull_src(controller, actions)
       if !Dir.exists?(@@controller_dir)
         Dir.mkdir(@@controller_dir)
       end
       # Header stuff
       opener(
-          "#{@@controller_dir}/#{param.downcase}_controller_spec.rb",
+          "#{@@controller_dir}/#{controller.downcase}_controller_spec.rb",
           "w",
-          ["require 'rails_helper'","RSpec.describe #{param.capitalize}Controller, type: :controller do"]
+          ["require 'rails_helper'","RSpec.describe #{controller.capitalize}Controller, type: :controller do"]
       )
 
     end
