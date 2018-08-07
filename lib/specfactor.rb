@@ -15,7 +15,7 @@ module Specfactor
           filer.call("a", item)
         end
       elsif mode == "end"
-        filer.call("a", "end")
+        filer.call("a", lines)
       else
         filer.call("a", lines)
       end
