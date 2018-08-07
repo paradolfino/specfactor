@@ -11,8 +11,8 @@ module Specfactor
       filer = lambda {|type, output| File.open(@@working_file, type) { |handle| handle.puts output}}
       if mode == "header"
         filer.call("w", nil)
-        lines.each do |line|
-          filer.call("a", line)
+        lines.each do |item|
+          filer.call("a", item)
         end
       else
         filer.call("a", lines)
