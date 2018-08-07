@@ -12,9 +12,7 @@ module Specfactor
       if mode == "header"
         filer.call("w", nil)
         lines.each do |line|
-          File.open(@@working_file, "a") do |handle|
-            handle.puts line
-          end
+          filer.call("a", line)
         end
       else
         File.open(@@working_file, "a") do |handle|
