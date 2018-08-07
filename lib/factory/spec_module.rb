@@ -26,14 +26,14 @@ module SpecModule
     "describe 'GET #show' do
       it 'returns http success' do
         #{name} = create(:#{name})
-        get :show, params: {id: part.to_param}
+        get :show, params: {id: #{name}.to_param}
         expect(response).to have_http_status(:success)
       end
 
-      it 'assigns @participant to a Participant' do
+      it 'assigns @#{name} to a #{name.capitalize}' do
         #{name} = create(:#{name})
-        get :show, params: {id: part.to_param}
-        expect(assigns(:participant)).to eq(part)
+        get :show, params: {id: #{name}.to_param}
+        expect(assigns(:#{name})).to eq(#{name})
       end
     end"
   end
