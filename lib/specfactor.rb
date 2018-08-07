@@ -36,6 +36,7 @@ module Specfactor
       actions = actions.split(" ")
       actions.each {|action| matched_actions << action if @@available_methods.include?(action)}
       # p matched_actions
+      pull_src(controller, matched_actions)
     end
 
     def start
