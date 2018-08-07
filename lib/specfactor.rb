@@ -8,9 +8,12 @@ module Specfactor
     @@available_methods = SpecModule.methods(false).to_a.map {|item| item.to_s}
     @@working_file = nil
     def opener(mode, lines)
-      File.open(@@working_file, mode) do |handle|
-        lines.each {|line| handle.puts line}
+      lines.each do
+        File.open(@@working_file, mode) do |handle|
+          handle.puts line
+        end
       end
+
     end
 
     def pull_src(controller, actions)
