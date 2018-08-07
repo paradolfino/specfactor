@@ -42,8 +42,8 @@
       <file leaf-file-name="specfactor.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/specfactor.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            <state relative-caret-position="46">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -206,12 +206,12 @@
       <workItem from="1533427590799" duration="7327000" />
       <workItem from="1533482968695" duration="252000" />
       <workItem from="1533587710407" duration="1659000" />
-      <workItem from="1533666965636" duration="5294000" />
+      <workItem from="1533666965636" duration="5299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14532000" />
+    <option name="totallyTimeSpent" value="14537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -461,8 +461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/specfactor.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        <state relative-caret-position="46">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
