@@ -9,6 +9,7 @@ module Specfactor
     @@working_file = nil
     def opener(mode, lines)
       p lines
+      File.open(@@working_file, "w") { |handle| puts nil}
       lines.each do |line|
         File.open(@@working_file, mode) do |handle|
           handle.puts line
