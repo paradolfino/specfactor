@@ -16,6 +16,10 @@ module Specfactor
             handle.puts line
           end
         end
+      else
+        File.open(@@working_file, "a") do |handle|
+          handle.puts lines
+        end
       end
 
 
