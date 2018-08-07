@@ -8,6 +8,7 @@ module Specfactor
     @@available_methods = SpecModule.methods(false).to_a.map {|item| item.to_s}
     @@working_file = nil
     def opener(mode, lines)
+      p lines
       lines.each do |line|
         File.open(@@working_file, mode) do |handle|
           handle.puts line
