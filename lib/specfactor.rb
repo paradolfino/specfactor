@@ -8,7 +8,7 @@ module Specfactor
     @@available_methods = SpecModule.methods(false).to_a.map {|item| item.to_s}
     @@working_file = nil
     def opener(mode, lines)
-      p lines
+      filer.lambda(type) -> {}
       if mode == "header"
         File.open(@@working_file, "w") { |handle| puts ""}
         lines.each do |line|
