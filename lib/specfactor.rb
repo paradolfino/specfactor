@@ -33,11 +33,12 @@ module Specfactor
         puts controller
       end
       actions.split!(" ")
+      p actions
     end
 
     def start
       puts Dir.pwd
-      puts @@available_methods
+      p @@available_methods
       puts "Name of Controller:"
       controller = gets.chomp
       puts "Names of actions to generate:"
