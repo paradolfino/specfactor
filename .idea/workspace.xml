@@ -42,8 +42,8 @@
       <file leaf-file-name="specfactor.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/specfactor.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="62">
+              <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -206,12 +206,12 @@
       <workItem from="1533427590799" duration="7327000" />
       <workItem from="1533482968695" duration="252000" />
       <workItem from="1533587710407" duration="1659000" />
-      <workItem from="1533666965636" duration="5768000" />
+      <workItem from="1533666965636" duration="5794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15006000" />
+    <option name="totallyTimeSpent" value="15032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -464,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/specfactor.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="62">
+          <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
         </state>
       </provider>
     </entry>

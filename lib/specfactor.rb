@@ -10,6 +10,7 @@ module Specfactor
     def opener(mode, lines)
       p lines
       if mode == "header"
+        File.open(@@working_file, "w") { |handle| puts ""}
         lines.each do |line|
           File.open(@@working_file, "a") do |handle|
             handle.puts line
