@@ -6,9 +6,9 @@ module Specfactor
     include SpecModule
     @@controller_dir = "spec/controllers"
     @@available_methods = SpecModule.methods(false).to_a.map {|item| item.to_s}
-
-    def opener(file, mode, lines)
-      File.open(file, mode) do |handle|
+    @@working_file = nil
+    def opener(mode, lines)
+      File.open(@@working_file, mode) do |handle|
         lines.each {|line| handle.puts line}
       end
     end
@@ -17,14 +17,15 @@ module Specfactor
       if !Dir.exists?(@@controller_dir)
         Dir.mkdir(@@controller_dir)
       end
+      @@working_file = "#{@@controller_dir}/#{controller.downcase}_controller_spec.rb"
       # Header stuff
+
       opener(
-          "#{@@controller_dir}/#{controller.downcase}_controller_spec.rb",
           "w",
           ["require 'rails_helper'","RSpec.describe #{controller.capitalize}Controller, type: :controller do"]
       )
 
-      actions != nil ? actions.each {|action| }
+      actions != nil ? actions.each {|action| opener(working_file,)}
 
     end
 
