@@ -15,9 +15,7 @@ module Specfactor
           filer.call("a", line)
         end
       else
-        File.open(@@working_file, "a") do |handle|
-          handle.puts lines
-        end
+        filer.call("a", lines)
       end
 
 
