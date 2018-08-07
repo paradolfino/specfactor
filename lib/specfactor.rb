@@ -5,7 +5,7 @@ module Specfactor
   class Generator
     include SpecModule
     @@controller_dir = "spec/controllers"
-    @@available_methods = SpecModule.methods(false).to_a
+    @@available_methods = SpecModule.methods(false).to_a.map {|item| item.to_s}
 
     def opener(file, mode, lines)
       File.open(file, mode) do |handle|
