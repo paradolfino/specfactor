@@ -30,12 +30,12 @@ module Specfactor
       rem = "_controller"
       if controller.include? "_controller"
         controller.gsub!(rem, "")
-        puts controller
+        # puts controller
       end
       matched_actions = []
       actions = actions.split(" ")
       actions.each {|action| matched_actions << action if @@available_methods.include?(action)}
-      p matched_actions
+      # p matched_actions
     end
 
     def start
