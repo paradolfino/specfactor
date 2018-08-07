@@ -32,7 +32,7 @@ module Specfactor
         controller.gsub!(rem, "")
         puts controller
       end
-      actions.split!(" ")
+      actions.split(" ")
       p actions
     end
 
