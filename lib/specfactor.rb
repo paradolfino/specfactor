@@ -32,7 +32,9 @@ module Specfactor
         controller.gsub!(rem, "")
         puts controller
       end
+      matched_actions = []
       actions = actions.split(" ")
+      actions.each {|action| matched_actions << action if @@available_methods.include?(action)}
       p actions
     end
 
