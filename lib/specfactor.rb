@@ -9,11 +9,14 @@ module Specfactor
     @@working_file = nil
     def opener(mode, lines)
       p lines
-      lines.each do |line|
-        File.open(@@working_file, mode) do |handle|
-          handle.puts line
+      if mode == "header"
+        lines.each do |line|
+          File.open(@@working_file, "a") do |handle|
+            handle.puts line
+          end
         end
       end
+
 
     end
 
@@ -25,11 +28,11 @@ module Specfactor
       # Header stuff
 
       opener(
-          "w",
+          "header",
           ["require 'rails_helper'","RSpec.describe #{controller.capitalize}Controller, type: :controller do"]
       )
       p actions
-      actions != nil ? actions.each {|action| opener("a", SpecModule.public_send(action.to_sym, controller))} : nil
+      actions != nil ? actions.each {|action| opener("body", SpecModule.public_send(action.to_sym, controller))} : nil
 
     end
 
