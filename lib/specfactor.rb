@@ -33,7 +33,8 @@ module Specfactor
           ["require 'rails_helper'","RSpec.describe #{controller.capitalize}Controller, type: :controller do"]
       )
       # p actions
-      actions != nil ? actions.each {|action| opener("body", SpecModule.public_send(action.to_sym, controller))} : nil
+      SpecModule.define_utils_methods_params(controller)
+      actions != nil ? actions.each {|action| opener("body", SpecModule.public_send(action.to_sym))} : nil
       opener("end", "end")
 
     end

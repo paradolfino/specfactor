@@ -1,7 +1,10 @@
+
 require 'active_support'
 require 'active_support/core_ext/string'
 
 module Utils
+
+
   def self.pluralize(string)
     return ActiveSupport::Inflector.pluralize(string)
   end
@@ -9,39 +12,60 @@ module Utils
   def self.singularize(string)
     return ActiveSupport::Inflector.singularize(string)
   end
+
 end
 module SpecModule
   include Utils
 
-  def self.index(name)
+  @@term = nil
+
+  def self.define_utils_methods_params(term)
+    @@term = term
+  end
+
+  def self.si
+    Utils.singularize(@@term)
+  end
+
+  def self.si_ca
+    Utils.singularize(@@term.capitalize)
+  end
+
+  def self.pl
+    Utils.pluralize(@@term)
+  end
+
+  def self.index
     "describe 'GET #index' do
       it 'returns http success' do
         get :index
         expect(response).to have_http_status(:success)
       end
-      it 'assigns @#{Utils.pluralize(name)} to #{Utils.singularize(name.capitalize)}.all' do
-        #{Utils.singularize(name)} = create(:#{Utils.singularize(name)})
+      it 'assigns @#{SpecModule.pl} to #{SpecModule.si_ca)}.all' do
+        #{SpecModule.si} = create(:#{SpecModule.si})
         get :index
-        expect(assigns(:#{Utils.pluralize(name)})).to eq([#{Utils.singularize(name)}])
+        expect(assigns(:#{SpecModule.pl})).to eq([#{SpecModule.si}])
       end
     end"
   end
 
-  def self.show(name)
+  def self.show
     "describe 'GET #show' do
       it 'returns http success' do
-        #{Utils.singularize(name)} = create(:#{Utils.singularize(name)})
-        get :show, params: {id: #{Utils.singularize(name)}.to_param}
+        #{SpecModule.si} = create(:#{SpecModule.si})
+        get :show, params: {id: #{SpecModule.si}.to_param}
         expect(response).to have_http_status(:success)
       end
 
-      it 'assigns @#{Utils.singularize(name)} to a #{Utils.singularize(name.capitalize)}' do
-        #{Utils.singularize(name)} = create(:#{Utils.singularize(name)})
-        get :show, params: {id: #{Utils.singularize(name)}.to_param}
-        expect(assigns(:#{Utils.singularize(name)})).to eq(#{Utils.singularize(name)})
+      it 'assigns @#{SpecModule.si} to a #{SpecModule.si_ca}' do
+        #{SpecModule.si} = create(:#{SpecModule.si})
+        get :show, params: {id: #{SpecModule.si}.to_param}
+        expect(assigns(:#{SpecModule.si})).to eq(#{SpecModule.si})
       end
     end"
   end
+
+
 
 end
 
