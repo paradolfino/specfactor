@@ -4,11 +4,26 @@ require "factory/spec_module"
 module Specfactor
   class Generator
     include SpecModule
-    @@controller_dir = "spec/controllers"
-    @@available_methods = SpecModule.methods(false).to_a.map {|item| item.to_s}
-    @@working_file = nil
+    attr_accessor :working_dir, :working_file, :protected_methods, :available_methods, :found_methods
+
+    def start
+      @working_dir = "spec/controllers"
+      @protected_methods = %w(define_utils_methods_params si si_ca pl)
+      @found_methods = SpecModule.methods(false).to_a.map {|item| item.to_s}
+      @available_methods = @found_methods - @protected_methods
+      @working_file = nil
+
+      puts Dir.pwd
+      puts "Name of Controller:"
+      controller = gets.chomp
+      puts "These actions are currently available for generation: #{@available_methods.inspect}"
+      puts "Provide the actions you'd like to generate tests for. Separate action names with spaces:"
+      actions = gets.chomp
+      sanitize(controller, actions)
+    end
+
     def opener(mode, lines)
-      filer = lambda {|type, output| File.open(@@working_file, type) { |handle| handle.puts output}}
+      filer = lambda {|type, output| File.open(@working_file, type) { |handle| handle.puts output}}
       if mode == "header"
         filer.call("w", nil)
         lines.each do |item|
@@ -22,10 +37,10 @@ module Specfactor
     end
 
     def pull_src(controller, actions)
-      if !Dir.exists?(@@controller_dir)
-        Dir.mkdir(@@controller_dir)
+      if !Dir.exists?(@working_dir)
+        Dir.mkdir(@working_dir)
       end
-      @@working_file = "#{@@controller_dir}/#{controller.downcase}_controller_spec.rb"
+      @working_file = "#{@working_dir}/#{controller.downcase}_controller_spec.rb"
       # Header stuff
 
       opener(
@@ -47,20 +62,12 @@ module Specfactor
       end
       matched_actions = []
       actions = actions.split(" ")
-      actions.each {|action| matched_actions << action if @@available_methods.include?(action)}
+      actions.each {|action| matched_actions << action if @available_methods.include?(action)}
       # p matched_actions
       pull_src(controller, matched_actions)
     end
 
-    def start
-      puts Dir.pwd
-      p @@available_methods
-      puts "Name of Controller:"
-      controller = gets.chomp
-      puts "Names of actions to generate:"
-      actions = gets.chomp
-      sanitize(controller, actions)
-    end
+
   end
 end
 

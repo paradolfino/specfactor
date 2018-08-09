@@ -41,7 +41,7 @@ module SpecModule
         get :index
         expect(response).to have_http_status(:success)
       end
-      it 'assigns @#{SpecModule.pl} to #{SpecModule.si_ca)}.all' do
+      it 'assigns @#{SpecModule.pl} to #{SpecModule.si_ca}.all' do
         #{SpecModule.si} = create(:#{SpecModule.si})
         get :index
         expect(assigns(:#{SpecModule.pl})).to eq([#{SpecModule.si}])
