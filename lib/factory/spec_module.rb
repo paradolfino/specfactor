@@ -65,6 +65,25 @@ module SpecModule
     end"
   end
 
+  def self.new
+    "describe 'GET #new' do
+      it 'returns http success' do
+        get :new
+        expect(response).to have_http_status(:success)
+      end
+
+      it 'assigns @#{SpecModule.si} to a new #{SpecModule.si_ca}' do
+        #{SpecModule.si} = create(:#{SpecModule.si})
+        get :new, params: {id: #{SpecModule.si}.to_param}
+        expect(assigns(:#{SpecModule.si})).to be_a_new(#{SpecModule.si_ca})
+      end
+    end"
+  end
+
+  def self.create
+
+  end
+
 
 
 end
