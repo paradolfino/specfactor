@@ -81,7 +81,38 @@ module SpecModule
   end
 
   def self.create
+    "describe 'POST #create' do
 
+      let(:#{SpecModule.si}) {create(:#{SpecModule.si})}
+      let(:valid_attributes) { attributes_for(:#{SpecModule.si} )}
+      let(:invalid_attributes) { attributes_for(:invalid_both)}
+
+      it 'creates a new #{SpecModule.si}' do
+        expect{
+          post :create, params: {#{SpecModule.si}: valid_attributes}
+        }.to change(#{SpecModule.si_ca}, :count).by(1)
+      end
+
+      it 'redirects on save' do
+        post :create, params: {#{SpecModule.si}: valid_attributes}
+        expect(response).to redirect_to(#{SpecModule.pl}_path)
+      end
+
+      it 'renders a flash message on save' do
+        post :create, params: {#{SpecModule.si}: valid_attributes}
+        expect(flash[:notice]).to be_present
+      end
+
+      it 'fails to create a new #{SpecModule.si}' do
+        expect(build(:invalid_both)).to be_invalid
+      end
+
+      it 'redirects to new template on failure to save new #{SpecModule.si}' do
+        post :create, params: {#{SpecModule.si}: invalid_attributes}
+        expect(response).to redirect_to(new_#{SpecModule.si}_path)
+      end
+
+    end"
   end
 
 
