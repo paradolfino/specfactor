@@ -85,7 +85,7 @@ module SpecModule
 
       let(:#{SpecModule.si}) {create(:#{SpecModule.si})}
       let(:valid_attributes) { attributes_for(:#{SpecModule.si} )}
-      let(:invalid_attributes) { attributes_for(:invalid_both)}
+      let(:invalid_attributes) { attributes_for(:invalid_#{SpecModule.si}_attrs)}
 
       it 'creates a new #{SpecModule.si}' do
         expect{
@@ -104,7 +104,7 @@ module SpecModule
       end
 
       it 'fails to create a new #{SpecModule.si}' do
-        expect(build(:invalid_both)).to be_invalid
+        expect(build(:invalid_#{SpecModule.si}_attrs)).to be_invalid
       end
 
       it 'redirects to new template on failure to save new #{SpecModule.si}' do
@@ -114,6 +114,7 @@ module SpecModule
 
     end"
   end
+
 
 
 

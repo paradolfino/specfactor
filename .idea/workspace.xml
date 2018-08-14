@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d5deaf-a4c4-4957-8683-df338d8419ae" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/factory/spec_module.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/factory/spec_module.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +18,8 @@
       <file leaf-file-name="specfactor.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/specfactor.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-279">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -30,8 +32,8 @@
       <file leaf-file-name="spec_module.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/factory/spec_module.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="76" column="57" lean-forward="true" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
+            <state relative-caret-position="317">
+              <caret line="120" selection-start-line="120" selection-end-line="120" />
             </state>
           </provider>
         </entry>
@@ -58,7 +60,7 @@
       <file leaf-file-name="specfactor.gemspec" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/specfactor.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
+            <state relative-caret-position="270">
               <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
             </state>
           </provider>
@@ -80,11 +82,13 @@
       <find>&quot;</find>
       <find>Participant</find>
       <find>participant</find>
+      <find>invalid_both</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
       <replace>#{SpecModule.si_ca}</replace>
       <replace>#{SpecModule.si}</replace>
+      <replace>invalid_#{SpecModule.si}_attrs</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -205,18 +209,19 @@
       <workItem from="1533587710407" duration="1659000" />
       <workItem from="1533666965636" duration="8838000" />
       <workItem from="1533755320262" duration="6711000" />
-      <workItem from="1533841667384" duration="7675000" />
+      <workItem from="1533841667384" duration="7696000" />
+      <workItem from="1534074156842" duration="151000" />
+      <workItem from="1534182255845" duration="25000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32462000" />
+    <option name="totallyTimeSpent" value="32659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26752505" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2746781" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
@@ -441,21 +446,15 @@
     <entry file="file://$PROJECT_DIR$/pull_me.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/test_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/robots_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/yoddels_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllers/test_controller_spec.rb" />
+    <entry file="file://$PROJECT_DIR$/spec/controllers/robots_controller_spec.rb" />
+    <entry file="file://$PROJECT_DIR$/spec/controllers/yoddels_controller_spec.rb" />
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/specfactor.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
+        <state relative-caret-position="270">
           <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
         </state>
       </provider>
@@ -463,16 +462,12 @@
     <entry file="file://$PROJECT_DIR$/spec/specfactor_spec.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/tests_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/testsz_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllers/tests_controller_spec.rb" />
+    <entry file="file://$PROJECT_DIR$/spec/controllers/testsz_controller_spec.rb" />
     <entry file="file://$PROJECT_DIR$/lib/specfactor.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-279">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -488,8 +483,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/factory/spec_module.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="76" column="57" lean-forward="true" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
+        <state relative-caret-position="317">
+          <caret line="120" selection-start-line="120" selection-end-line="120" />
         </state>
       </provider>
     </entry>
