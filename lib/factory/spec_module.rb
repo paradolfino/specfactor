@@ -119,7 +119,7 @@ module SpecModule
     "describe 'GET #edit' do
       it 'returns http success' do
         #{SpecModule.si} = create(:#{SpecModule.si})
-        get :edit, params: {id: part.to_param}
+        get :edit, params: {id: #{SpecModule.si}.to_param}
         expect(response).to have_http_status(:success)
       end
       it 'assigns @#{SpecModule.si} to a #{SpecModule.si_ca}' do
