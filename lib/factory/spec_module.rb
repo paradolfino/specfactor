@@ -115,7 +115,9 @@ module SpecModule
     end"
   end
 
-
+  def self.edit
+    
+  end
 
 
 end
