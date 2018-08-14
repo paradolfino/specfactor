@@ -129,6 +129,50 @@ module SpecModule
       end
     end"
   end
+  
+  def self.update
+    "describe 'POST #update' do
+
+      let(:participant) {create(:participant)}
+      let(:valid_attributes) { attributes_for(:participant )}
+      let(:new_attributes) { attributes_for(:updated_participant)}
+      let(:invalid_attributes) { attributes_for(:invalid_both)}
+
+      it 'updates a participant' do
+        patch :update, params: {id: participant.to_param,participant: new_attributes}
+        participant.reload
+        expect(participant.name).to eq('test2')
+        expect(participant.points).to eq(800)
+      end
+
+      it 'redirects on update' do
+        patch :update, params: {id: participant.to_param,participant: new_attributes}
+        expect(response).to redirect_to(participants_path)
+      end
+
+      it 'renders a flash message on update' do
+        patch :update, params: {id: participant.to_param,participant: new_attributes}
+        expect(flash[:notice]).to be_present
+      end
+
+      it 'renders a flash message on failure to update' do
+        patch :update, params: {id: participant.to_param,participant: invalid_attributes}
+        expect(flash[:alert]).to be_present
+      end
+
+      it 'fails to update participant' do
+
+        expect(build(:invalid_both)).to be_invalid
+
+      end
+
+      it 'redirects to edit template on failure to update participant' do
+        patch :update, params: {id: participant.to_param,participant: invalid_attributes}
+        expect(response).to redirect_to(edit_participant_path(participant))
+      end
+
+    end"
+  end
 
 
 end
