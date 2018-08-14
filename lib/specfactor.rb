@@ -17,7 +17,7 @@ module Specfactor
       puts "Name of Controller:"
       controller = gets.chomp
       puts "These actions are currently available for generation: #{@available_methods.inspect}"
-      puts "Provide the actions you'd like to generate tests for. Separate action names with spaces:"
+      puts "Provide the actions you'd like to generate tests for or type ALL to generate all tests. For multiple specific templates separate action names with spaces:"
       actions = gets.chomp
       sanitize(controller, actions)
     end
@@ -60,9 +60,14 @@ module Specfactor
         controller.gsub!(rem, "")
         # puts controller
       end
-      matched_actions = []
-      actions = actions.split(" ")
-      actions.each {|action| matched_actions << action if @available_methods.include?(action)}
+      if actions == "ALL"
+        matched_actions = @available_methods
+      else
+        matched_actions = []
+        actions = actions.split(" ")
+        actions.each {|action| matched_actions << action if @available_methods.include?(action)}
+      end
+
       # p matched_actions
       pull_src(controller, matched_actions)
     end

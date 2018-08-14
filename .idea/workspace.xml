@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d5deaf-a4c4-4957-8683-df338d8419ae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/factory/spec_module.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/factory/spec_module.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/specfactor.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/specfactor.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="specfactor.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="specfactor.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/specfactor.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="258">
+              <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -27,11 +27,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="spec_module.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spec_module.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/factory/spec_module.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+            <state relative-caret-position="1157">
+              <caret line="190" column="44" lean-forward="true" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests_controller_spec.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/controllers/tests_controller_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -81,12 +90,13 @@
       <find>participant</find>
       <find>&quot;</find>
       <find>invalid_both</find>
+      <find>Reward</find>
     </findStrings>
     <replaceStrings>
       <replace>#{SpecModule.si}</replace>
       <replace>'</replace>
-      <replace>#{SpecModule.si_ca}</replace>
       <replace>invalid_#{SpecModule.si}_attrs</replace>
+      <replace>#{SpecModule.si_ca}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -100,9 +110,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/specfactor.gemspec" />
-        <option value="$PROJECT_DIR$/lib/specfactor.rb" />
         <option value="$PROJECT_DIR$/lib/specfactor/version.rb" />
         <option value="$PROJECT_DIR$/lib/factory/spec_module.rb" />
+        <option value="$PROJECT_DIR$/spec/controllers/tests_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/specfactor.rb" />
       </list>
     </option>
   </component>
@@ -210,18 +221,18 @@
       <workItem from="1533841667384" duration="7696000" />
       <workItem from="1534074156842" duration="151000" />
       <workItem from="1534182255845" duration="25000" />
-      <workItem from="1534209589136" duration="1325000" />
+      <workItem from="1534209589136" duration="2212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33984000" />
+    <option name="totallyTimeSpent" value="34871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.27825466" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.27825466" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
@@ -230,7 +241,7 @@
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" />
+      <window_info anchor="bottom" id="Terminal" order="2" visible="true" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -462,15 +473,7 @@
     <entry file="file://$PROJECT_DIR$/spec/specfactor_spec.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/tests_controller_spec.rb" />
     <entry file="file://$PROJECT_DIR$/spec/controllers/testsz_controller_spec.rb" />
-    <entry file="file://$PROJECT_DIR$/lib/specfactor.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/controllers/roomies_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -481,10 +484,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllers/tests_controller_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/factory/spec_module.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+        <state relative-caret-position="1157">
+          <caret line="190" column="44" lean-forward="true" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/specfactor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
         </state>
       </provider>
     </entry>
