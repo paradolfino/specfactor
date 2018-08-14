@@ -125,7 +125,7 @@ module SpecModule
       it 'assigns @#{SpecModule.si} to a #{SpecModule.si_ca}' do
         part = create(:#{SpecModule.si})
         get :edit, params: {id: #{SpecModule.si}.to_param}
-        expect(assigns(:#{SpecModule.si})).to eq(part)
+        expect(assigns(:#{SpecModule.si})).to eq(#{SpecModule.si})
       end
     end"
   end
