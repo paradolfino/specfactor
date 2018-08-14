@@ -123,7 +123,7 @@ module SpecModule
         expect(response).to have_http_status(:success)
       end
       it 'assigns @#{SpecModule.si} to a #{SpecModule.si_ca}' do
-        part = create(:#{SpecModule.si})
+        #{SpecModule.si} = create(:#{SpecModule.si})
         get :edit, params: {id: #{SpecModule.si}.to_param}
         expect(assigns(:#{SpecModule.si})).to eq(#{SpecModule.si})
       end
