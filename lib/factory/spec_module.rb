@@ -116,7 +116,18 @@ module SpecModule
   end
 
   def self.edit
-    
+    "describe 'GET #edit' do
+      it 'returns http success' do
+        #{SpecModule.si} = create(:#{SpecModule.si})
+        get :edit, params: {id: part.to_param}
+        expect(response).to have_http_status(:success)
+      end
+      it 'assigns @#{SpecModule.si} to a #{SpecModule.si_ca}' do
+        part = create(:#{SpecModule.si})
+        get :edit, params: {id: #{SpecModule.si}.to_param}
+        expect(assigns(:#{SpecModule.si})).to eq(part)
+      end
+    end"
   end
 
 
