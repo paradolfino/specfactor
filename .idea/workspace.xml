@@ -30,8 +30,8 @@
       <file leaf-file-name="spec_module.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/factory/spec_module.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="173" column="7" selection-start-line="133" selection-start-column="5" selection-end-line="173" selection-end-column="7" />
+            <state relative-caret-position="283">
+              <caret line="160" column="9" lean-forward="true" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -83,10 +83,10 @@
       <find>&quot;</find>
     </findStrings>
     <replaceStrings>
-      <replace>#{SpecModule.si_ca}</replace>
       <replace>#{SpecModule.si}</replace>
       <replace>invalid_#{SpecModule.si}_attrs</replace>
       <replace>'</replace>
+      <replace>#{SpecModule.si_ca}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -210,12 +210,12 @@
       <workItem from="1533841667384" duration="7696000" />
       <workItem from="1534074156842" duration="151000" />
       <workItem from="1534182255845" duration="25000" />
-      <workItem from="1534209589136" duration="427000" />
+      <workItem from="1534209589136" duration="563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33086000" />
+    <option name="totallyTimeSpent" value="33222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -483,8 +483,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/factory/spec_module.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="173" column="7" selection-start-line="133" selection-start-column="5" selection-end-line="173" selection-end-column="7" />
+        <state relative-caret-position="283">
+          <caret line="160" column="9" lean-forward="true" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
         </state>
       </provider>
     </entry>

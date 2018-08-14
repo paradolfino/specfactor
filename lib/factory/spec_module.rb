@@ -133,42 +133,42 @@ module SpecModule
   def self.update
     "describe 'POST #update' do
 
-      let(:participant) {create(:participant)}
-      let(:valid_attributes) { attributes_for(:participant )}
-      let(:new_attributes) { attributes_for(:updated_participant)}
-      let(:invalid_attributes) { attributes_for(:invalid_both)}
+      let(:#{SpecModule.si}) {create(:#{SpecModule.si})}
+      let(:valid_attributes) { attributes_for(:#{SpecModule.si} )}
+      let(:new_attributes) { attributes_for(:updated_#{SpecModule.si})}
+      let(:invalid_attributes) { attributes_for(:invalid_#{SpecModule.si}_attrs)}
 
-      it 'updates a participant' do
-        patch :update, params: {id: participant.to_param,participant: new_attributes}
-        participant.reload
-        expect(participant.name).to eq('test2')
-        expect(participant.points).to eq(800)
+      it 'updates a #{SpecModule.si}' do
+        patch :update, params: {id: #{SpecModule.si}.to_param,#{SpecModule.si}: new_attributes}
+        #{SpecModule.si}.reload
+        expect(#{SpecModule.si}.name).to eq('test2')
+        expect(#{SpecModule.si}.points).to eq(800)
       end
 
       it 'redirects on update' do
-        patch :update, params: {id: participant.to_param,participant: new_attributes}
-        expect(response).to redirect_to(participants_path)
+        patch :update, params: {id: #{SpecModule.si}.to_param,#{SpecModule.si}: new_attributes}
+        expect(response).to redirect_to(#{SpecModule.si}s_path)
       end
 
       it 'renders a flash message on update' do
-        patch :update, params: {id: participant.to_param,participant: new_attributes}
+        patch :update, params: {id: #{SpecModule.si}.to_param,#{SpecModule.si}: new_attributes}
         expect(flash[:notice]).to be_present
       end
 
       it 'renders a flash message on failure to update' do
-        patch :update, params: {id: participant.to_param,participant: invalid_attributes}
+        patch :update, params: {id: #{SpecModule.si}.to_param,#{SpecModule.si}: invalid_attributes}
         expect(flash[:alert]).to be_present
       end
 
-      it 'fails to update participant' do
+      it 'fails to update #{SpecModule.si}' do
 
-        expect(build(:invalid_both)).to be_invalid
+        expect(build(:invalid_#{SpecModule.si}_attrs)).to be_invalid
 
       end
 
-      it 'redirects to edit template on failure to update participant' do
-        patch :update, params: {id: participant.to_param,participant: invalid_attributes}
-        expect(response).to redirect_to(edit_participant_path(participant))
+      it 'redirects to edit template on failure to update #{SpecModule.si}' do
+        patch :update, params: {id: #{SpecModule.si}.to_param,#{SpecModule.si}: invalid_attributes}
+        expect(response).to redirect_to(edit_#{SpecModule.si}_path(#{SpecModule.si}))
       end
 
     end"
