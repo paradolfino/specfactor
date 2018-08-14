@@ -30,8 +30,8 @@
       <file leaf-file-name="spec_module.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/factory/spec_module.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="160" column="9" lean-forward="true" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
+            <state relative-caret-position="332">
+              <caret line="144" column="10" selection-start-line="144" selection-start-column="10" selection-end-line="144" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -79,14 +79,14 @@
     <findStrings>
       <find>Participant</find>
       <find>participant</find>
-      <find>invalid_both</find>
       <find>&quot;</find>
+      <find>invalid_both</find>
     </findStrings>
     <replaceStrings>
       <replace>#{SpecModule.si}</replace>
-      <replace>invalid_#{SpecModule.si}_attrs</replace>
       <replace>'</replace>
       <replace>#{SpecModule.si_ca}</replace>
+      <replace>invalid_#{SpecModule.si}_attrs</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -210,12 +210,12 @@
       <workItem from="1533841667384" duration="7696000" />
       <workItem from="1534074156842" duration="151000" />
       <workItem from="1534182255845" duration="25000" />
-      <workItem from="1534209589136" duration="563000" />
+      <workItem from="1534209589136" duration="614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33222000" />
+    <option name="totallyTimeSpent" value="33273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -483,8 +483,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/factory/spec_module.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="160" column="9" lean-forward="true" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
+        <state relative-caret-position="332">
+          <caret line="144" column="10" selection-start-line="144" selection-start-column="10" selection-end-line="144" selection-end-column="10" />
         </state>
       </provider>
     </entry>
