@@ -174,6 +174,32 @@ module SpecModule
     end"
   end
 
+  def self.destroy
+    describe "DELETE #destroy" do
+      let(:reward) {build(:reward)}
+
+      it "destroys a reward" do
+        reward.save
+        expect {
+          delete :destroy, params: {id: reward.to_param }
+        }.to change(Reward, :count).by(-1)
+      end
+
+      it "renders a flash message after delete" do
+        reward.save
+        delete :destroy, params: {id: reward.to_param }
+        expect(flash[:notice]).to be_present
+      end
+
+      it "redirects to rewards_path after destroy" do
+        reward.save
+        delete :destroy, params: {id: reward.to_param }
+        expect(response).to redirect_to(rewards_path)
+      end
+
+    end
+  end
+
 
 end
 
